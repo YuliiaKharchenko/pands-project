@@ -1,6 +1,6 @@
-# The Project on module "Programming and scripting" 
+# The Project on the module "Programming and scripting" 
 
-#### **Analysis of Iris flower dataset using Python**
+#### **Analysis of the Iris flower dataset using Python**
 
 
 This repository contains an analysis of the Iris flower data set used by the famous British statistician and biologist [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher) to demonstrate the method of linear discriminant analysis in 1936. The data set was collected by botanist [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson). 
@@ -12,18 +12,18 @@ This repository contains an analysis of the Iris flower data set used by the fam
 Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/dataset/53/iris).
 
 
-#### Components of data set:
+#### Components of the data set:
 - sepal length in cm
 - sepal width in cm
 - petal length in cm
 - petal width in cm
 - species of Flowers(setosa,versicolor, virginica)
 
-#### Overwiew of the Iris data set: 
+#### Overview of the Iris data set: 
 1. There are 150 rows.
 3. Each row has a row index with values ranging from 0 to 149.
 4. The table has 5 columns. all the columns have a value for each of the rows (all 150 values are non-null). 
-5. The columns sepal length in cm, sepal width in cm,  petal length in cm, petal width in cm contain float type data (float64). The column species of Flowers contain string type data (object).
+5. The columns sepal length in cm, sepal width in cm,  petal length in cm, petal width in cm contain float type data (float64). The column species of flowers contain string type data (object).
 
 
 
