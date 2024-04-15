@@ -23,18 +23,22 @@ Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/d
 1. There are 150 rows.
 3. Each row has a row index with values ranging from 0 to 149.
 4. The table has 5 columns. all the columns have a value for each of the rows (all 150 values are non-null). 
-5. The columns sepal length in cm, sepal width in cm,  petal length in cm, petal width in cm contain float type data (float64). The column species of flowers contain string type data (object).
+5. The columns sepal length in cm, sepal width in cm,  petal length in cm, petal width in cm contain float type data (float64). The column species of flowers contains string type data (object).
 
 
-
+#### Data analysis Python libraries required: 
+ - Pandas - to read, manipulate, calculate data, review data types 
+ - Numpy - to calculate data
+ - Matplotlib.pyplot - to create plots 
+ - Seaborn - to visualise rezults of analysis 
 
 
 *** 
 
 Some links to explore: 
 
-
-
+https://seaborn.pydata.org/generated/seaborn.load_dataset.html
+https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
 https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
 https://github.com/abhikumar22/Exploratory-Data-Analysis-on-IRIS-Dataset/blob/master/EDA_Flower.ipynb

@@ -1,0 +1,5 @@
+count             150
+unique              3
+top       Iris-setosa
+freq               50
+Name: species of flowers, dtype: object
