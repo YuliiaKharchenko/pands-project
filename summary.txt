@@ -1,3 +1,7 @@
+Summary information of Iris dataset (description of the data in the DataFrame)
+--------------------------------------------------------------------------------
+General characteristics of variables
+--------------------------------------------------------------------------------
        sepal length_cm  sepal width_cm  petal length_cm  petal width_cm
 count       150.000000      150.000000       150.000000      150.000000
 mean          5.843333        3.054000         3.758667        1.198667
@@ -7,3 +11,21 @@ min           4.300000        2.000000         1.000000        0.100000
 50%           5.800000        3.000000         4.350000        1.300000
 75%           6.400000        3.300000         5.100000        1.800000
 max           7.900000        4.400000         6.900000        2.500000
+--------------------------------------------------------------------------------
+Checking of missing values
+--------------------------------------------------------------------------------
+sepal length_cm       0
+sepal width_cm        0
+petal length_cm       0
+petal width_cm        0
+species of flowers    0
+dtype: int64
+--------------------------------------------------------------------------------
+Count the number of flowers of each species
+--------------------------------------------------------------------------------
+species of flowers
+Iris-setosa        50
+Iris-versicolor    50
+Iris-virginica     50
+Name: count, dtype: int64
+--------------------------------------------------------------------------------

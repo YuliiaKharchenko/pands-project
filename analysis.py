@@ -13,7 +13,7 @@ filename="iris.csv"
 file="Summary.txt"
 
 
-def readwithPands():
+def read_with_pandas():
    try:
       data=pd.read_csv(filename)
       return data 
@@ -21,12 +21,27 @@ def readwithPands():
       print(f"File{filename} is not found")
      
    
-def summaryInfo():
-   data= readwithPands()
-   summaryinfo= data.describe()
+def summary_info():
+   data= read_with_pandas()
+   summaryinfo= [
+      "Summary information of Iris dataset (description of the data in the DataFrame)",
+      "--------" * 10, 
+      "General characteristics of variables",
+      "--------" * 10, 
+      data.describe(),
+      "--------" * 10,
+      "Checking of missing values",
+      "--------" * 10, 
+      data.isnull().sum(),
+      "--------" * 10, 
+      "Count the number of flowers of each species",
+      "--------" * 10,
+      data["species of flowers"].value_counts(),
+      "--------" * 10
+   ]
    return  summaryinfo
 
-def readFileCSV():
+def read_fileCSV():
     with open(filename, "rt") as irisset:
        try:
           readfile=csv.reader(irisset,delimiter=",")
@@ -40,13 +55,14 @@ def readFileCSV():
         print(filename, "does not exist!") # output the message when an error occurs
 
 
-def summaryInfoResults(): 
-    results=summaryInfo()
-    with open (file, "wt") as f:
-       print(results, file=f)
+def summary_info_results(): 
+   results=summary_info()
+   with open(file, "wt", encoding="utf-8") as f:
+        for result in results:
+            print(result, file=f)
 
-def separateSummaryInfo():
-    data = readwithPands()
+def separate_summary_info():
+    data = read_with_pandas()
     # Obtain the names of all columns in the df data
     columns = data.columns
     # Iterate over each column
@@ -56,8 +72,8 @@ def separateSummaryInfo():
       with open(separateFiles, "wt") as f:
          print(separateSummary, file=f)
 
-def safeHistogram():
-    data = readwithPands()
+def safe_histogram():
+    data = read_with_pandas()
     # Iterate over each column
     for column in data:
         # Create a histogram
@@ -71,17 +87,24 @@ def safeHistogram():
         plt.savefig(f"{column}_histogram.png")
         plt.close()  # Close the current figure to free up memory
 
-def saveScatterPlot():
-   data = readwithPands()
+def save_scatter_plot():
+   data = read_with_pandas()
    sns.pairplot(data, hue="species of flowers", palette="Paired")
    plt.legend()
    # Save the scatter plot as a PNG file
    plt.savefig("scatter_plot.png")
    plt.close()
 
+def ratio():
+   pass
+
+def main():
+   summary_info_results()
+   separate_summary_info()
+   safe_histogram()
+   save_scatter_plot()
+   print("The project is completed")
 
 if __name__ == "__main__":
-   summaryInfoResults()
-   separateSummaryInfo()
-   safeHistogram()
-   saveScatterPlot()
+   main()
+ 
