@@ -78,7 +78,7 @@ def safe_histogram():
     # Iterate over each column
     for column in data:
         # Create a histogram
-        plt.figure(figsize=(8, 6))
+        plt.figure(figsize=(10, 8))
         plt.hist(data[column], color="purple", edgecolor="black")
         plt.title(f"Histogram of {column}")
         plt.xlabel(column)
@@ -98,16 +98,28 @@ def save_scatter_plot():
    plt.close()
 
 
+def correlation_matrix():
+   data= read_with_pandas()
+   columns = data.drop(columns=["species of flowers"])
+   corr_mat = columns.corr()
+   plt.figure(figsize=(10, 8))
+   sns.heatmap(corr_mat, annot=True, cmap="BuPu", fmt=".2f")
+   plt.title("Iris dataset correlation matrix")
+   plt.savefig("Correlation_matrix.png")
+   plt.close()
+
+
 def main():
    summary_info_results()
    separate_summary_info()
    safe_histogram()
    save_scatter_plot()
    ratio.individual_and_mean_ratios()
+   correlation_matrix() 
    print("The project is completed")
 
 
 
 if __name__ == "__main__":
    main()
- 
+  
