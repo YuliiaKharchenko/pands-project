@@ -1,0 +1,15 @@
+
+
+Mean Ratios:
+Species: Iris-setosa
+Mean Petal Length to Width Ratio: 7.08
+Mean Sepal Length to Width Ratio: 1.47
+
+Species: Iris-versicolor
+Mean Petal Length to Width Ratio: 3.24
+Mean Sepal Length to Width Ratio: 2.16
+
+Species: Iris-virginica
+Mean Petal Length to Width Ratio: 2.78
+Mean Sepal Length to Width Ratio: 2.23
+

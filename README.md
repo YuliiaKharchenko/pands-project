@@ -31,17 +31,17 @@ Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/d
  - Numpy - to calculate data
  - Matplotlib.pyplot - to create plots 
  - Seaborn - to visualise rezults of analysis 
-
+ - CSV - to read, write, and process data from CSV files
 
 *** 
 
-Some links to explore: 
-
-https://seaborn.pydata.org/generated/seaborn.load_dataset.html
-https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
-https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
-https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
-https://github.com/abhikumar22/Exploratory-Data-Analysis-on-IRIS-Dataset/blob/master/EDA_Flower.ipynb
-https://www.linkedin.com/pulse/iris-dataset-analysis-using-machine-learning-techniques-pramod-sahu-g3kgf
-https://www.tutorialspoint.com/exploratory-data-analysis-on-iris-dataset
-https://www.devx.com/terms/iris-flower-data-set/
+#### References: 
+* [Pandas. User guide.](https://pandas.pydata.org/docs/user_guide/index.html)
+* [NumPy fundamentals](https://numpy.org/doc/stable/user/basics.html)
+* [Matplotlib.pyplot](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html)
+* [Seaborn: statistical data visualization](https://seaborn.pydata.org/#seaborn-statistical-data-visualization)
+* [CSV File Reading and Writing](https://docs.python.org/3/library/csv.html)
+* [Reading and Writing CSV Files in Python_Real_Python](https://realpython.com/python-csv/)
+* [Exploratory Data Analysis on Iris Dataset on www.geeksforgeeks.org](https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/)
+* [Exploratory Data Analysis on Iris Dataset](https://www.tutorialspoint.com/exploratory-data-analysis-on-iris-dataset)
+* [Iris Flower Data Set on www.devx.com](https://www.devx.com/terms/iris-flower-data-set/)

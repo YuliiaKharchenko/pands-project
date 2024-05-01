@@ -1,13 +1,13 @@
-# Analysis of Iris flower data set using Python
+# Analysis of Iris flower dataset using Python
 
 # Autor Yuliia Kharchenko 
 
-import csv 
+
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
 import seaborn as sns 
-
+import ratio
 
 filename="iris.csv"
 file="Summary.txt"
@@ -37,22 +37,21 @@ def summary_info():
       "Count the number of flowers of each species",
       "--------" * 10,
       data["species of flowers"].value_counts(),
+      "--------" * 10,
+      "Setosa species description",
+      "--------" * 10,
+      data.loc[data["species of flowers"]=="Iris-setosa"].describe(),
+       "--------" * 10,
+      "Versicolor species description",
+      "--------" * 10,
+      data.loc[data["species of flowers"]=="Iris-versicolor"].describe(),
+       "--------" * 10,
+      "Virginica species description",
+      "--------" * 10,
+      data.loc[data["species of flowers"]=="Iris-virginica"].describe(),
       "--------" * 10
    ]
    return  summaryinfo
-
-def read_fileCSV():
-    with open(filename, "rt") as irisset:
-       try:
-          readfile=csv.reader(irisset,delimiter=",")
-          firstline=True
-          for line in readfile: 
-            if firstline:
-               firstline=False
-               continue
-           #  print(line)
-       except FileNotFoundError: #the error type 
-        print(filename, "does not exist!") # output the message when an error occurs
 
 
 def summary_info_results(): 
@@ -60,6 +59,7 @@ def summary_info_results():
    with open(file, "wt", encoding="utf-8") as f:
         for result in results:
             print(result, file=f)
+
 
 def separate_summary_info():
     data = read_with_pandas()
@@ -71,6 +71,7 @@ def separate_summary_info():
       separateFiles = f"{column}(Summary).txt"
       with open(separateFiles, "wt") as f:
          print(separateSummary, file=f)
+
 
 def safe_histogram():
     data = read_with_pandas()
@@ -87,6 +88,7 @@ def safe_histogram():
         plt.savefig(f"{column}_histogram.png")
         plt.close()  # Close the current figure to free up memory
 
+
 def save_scatter_plot():
    data = read_with_pandas()
    sns.pairplot(data, hue="species of flowers", palette="Paired")
@@ -95,15 +97,16 @@ def save_scatter_plot():
    plt.savefig("scatter_plot.png")
    plt.close()
 
-def ratio():
-   pass
 
 def main():
    summary_info_results()
    separate_summary_info()
    safe_histogram()
    save_scatter_plot()
+   ratio.individual_and_mean_ratios()
    print("The project is completed")
+
+
 
 if __name__ == "__main__":
    main()
