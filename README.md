@@ -3,6 +3,9 @@
 #### **Analysis of the Iris flower dataset using Python**
 
 
+![](C:\Users\uliya\Desktop\Pands\pands-project\iris-pic.png)
+
+
 
 This repository contains an analysis of the Iris flower dataset used by the famous British statistician and biologist [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher) to demonstrate the method of linear discriminant analysis in 1936. The data set was collected by botanist [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson). 
 
@@ -49,19 +52,19 @@ Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/d
 
 1. Clone the repository to your local machine:
 
-'''git clone <repository_url>'''
+> git clone <repository_url>
 
 2. Navigate to the project directory:
 
-'''cd <project_directory>'''
+> cd <project_directory>
 
 3. Install the required dependencies. You can install them using pip:
 
-'''pip install pandas numpy matplotlib seaborn'''
+> pip install pandas numpy matplotlib seaborn
 
 4. Once the dependencies are installed, you can run the program by executing the analysis.py script:
 
-'''python analysis.py'''
+> python analysis.py
 
 The program will generate summary information about the dataset, histograms for each variable, scatter plots for pairs of variables, and additional analysis such as individual and mean ratios, and a correlation matrix.
 Explore the generated files and outputs to gain insights into the dataset. You can further customize the analysis according to your requirements by modifying the analysis.py script.
@@ -79,6 +82,7 @@ This project was created by **Yuliia Kharchenko**.
 * [Matplotlib.pyplot](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html)
 * [Seaborn: statistical data visualization](https://seaborn.pydata.org/#seaborn-statistical-data-visualization)
 * [CSV File Reading and Writing](https://docs.python.org/3/library/csv.html)
+* [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 * [Reading and Writing CSV Files in Python_Real_Python](https://realpython.com/python-csv/)
 * [Exploratory Data Analysis on Iris Dataset on www.geeksforgeeks.org](https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/)
 * [Exploratory Data Analysis on Iris Dataset](https://www.tutorialspoint.com/exploratory-data-analysis-on-iris-dataset)
