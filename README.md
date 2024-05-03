@@ -3,10 +3,18 @@
 #### **Analysis of the Iris flower dataset using Python**
 
 
-This repository contains an analysis of the Iris flower data set used by the famous British statistician and biologist [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher) to demonstrate the method of linear discriminant analysis in 1936. The data set was collected by botanist [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson). 
+
+This repository contains an analysis of the Iris flower dataset used by the famous British statistician and biologist [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher) to demonstrate the method of linear discriminant analysis in 1936. The data set was collected by botanist [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson). 
+
+##### **Key Objectives**:
+
+1. **Data Summary**: The program outputs a comprehensive summary of each variable in the dataset to a single text file. This summary includes general characteristics of variables, checking for missing values, and counting the number of flowers of each species.
+2. **Histogram Generation**: Histograms of each variable are saved as PNG files. Histograms provide insights into the distribution of values for each feature and help identify patterns and outliers.
+3. **Scatter Plot Creation**: The program generates scatter plots of each pair of variables. Scatter plots visualize the relationship between two variables and can reveal correlations or patterns in the data.
+4. **Additional Analysis**: The program conducts any other pertinent analysis necessary for gaining deeper insights into the dataset. This includes calculating individual and mean ratios of length-to-width variables, generating a correlation matrix, and saving it to a separate file.
 
 
-[WikipediA's](https://en.wikipedia.org/wiki/Iris_flower_data_set) description of the data set.
+[WikipediA's](https://en.wikipedia.org/wiki/Iris_flower_data_set) description of the dataset.
 
 
 Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/dataset/53/iris).
