@@ -3,7 +3,7 @@
 #### **Analysis of the Iris flower dataset using Python**
 
 
-![Flower](C:\Users\uliya\Desktop\Pands\pands-project\iris-pic.png)
+![Flower](iris-pic.png)
 
 
 
