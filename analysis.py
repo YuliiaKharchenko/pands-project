@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import seaborn as sns 
 import ratio
-from pandas_profiling import ProfileReport
+
 
 filename="iris.csv"
 file="Summary.txt"

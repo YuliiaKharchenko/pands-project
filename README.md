@@ -6,7 +6,7 @@
 
 This repository contains an analysis of the Iris flower dataset used by the famous British statistician and biologist [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher) to demonstrate the method of linear discriminant analysis in 1936. The data set was collected by botanist [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson). 
 
-##### **Key Objectives**:
+#### **Key Objectives**:
 
 1. **Data Summary**: The program outputs a comprehensive summary of each variable in the dataset to a single text file. This summary includes general characteristics of variables, checking for missing values, and counting the number of flowers of each species.
 2. **Histogram Generation**: Histograms of each variable are saved as PNG files. Histograms provide insights into the distribution of values for each feature and help identify patterns and outliers.
@@ -20,14 +20,16 @@ This repository contains an analysis of the Iris flower dataset used by the famo
 Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/dataset/53/iris).
 
 
-#### Components of the data set:
+#### Components of the dataset:
+
 - sepal length in cm
 - sepal width in cm
 - petal length in cm
 - petal width in cm
 - species of Flowers(setosa,versicolor, virginica)
 
-#### Overview of the Iris data set: 
+#### Overview of the Iris dataset: 
+
 1. There are 150 rows.
 3. Each row has a row index with values ranging from 0 to 149.
 4. The table has 5 columns. all the columns have a value for each of the rows (all 150 values are non-null). 
@@ -35,11 +37,39 @@ Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/d
 
 
 #### Data analysis Python libraries required: 
+
  - Pandas - to read, manipulate, calculate data, review data types 
  - Numpy - to calculate data
  - Matplotlib.pyplot - to create plots 
  - Seaborn - to visualise rezults of analysis 
  - CSV - to read, write, and process data from CSV files
+
+
+#### Get started
+
+1. Clone the repository to your local machine:
+
+'''git clone <repository_url>'''
+
+2. Navigate to the project directory:
+
+'''cd <project_directory>'''
+
+3. Install the required dependencies. You can install them using pip:
+
+'''pip install pandas numpy matplotlib seaborn'''
+
+4. Once the dependencies are installed, you can run the program by executing the analysis.py script:
+
+'''python analysis.py'''
+
+The program will generate summary information about the dataset, histograms for each variable, scatter plots for pairs of variables, and additional analysis such as individual and mean ratios, and a correlation matrix.
+Explore the generated files and outputs to gain insights into the dataset. You can further customize the analysis according to your requirements by modifying the analysis.py script.
+
+#### Author
+
+This project was created by **Yuliia Kharchenko**. 
+
 
 *** 
 
