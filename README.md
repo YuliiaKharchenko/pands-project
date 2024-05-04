@@ -22,6 +22,7 @@ This repository contains an analysis of the Iris flower dataset used by the famo
 
 Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/dataset/53/iris).
 
+***
 
 #### Components of the dataset:
 
@@ -47,6 +48,7 @@ Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/d
  - Seaborn - to visualise rezults of analysis 
  - CSV - to read, write, and process data from CSV files
 
+***
 
 #### Get started
 
@@ -60,7 +62,7 @@ Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/d
 
 3. Install the required dependencies. You can install them using pip:
 
-> pip install pandas numpy matplotlib seaborn
+> pip install pandas numpy matplotlib.pyplot seaborn
 
 4. Once the dependencies are installed, you can run the program by executing the analysis.py script:
 
@@ -69,22 +71,64 @@ Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/d
 The program will generate summary information about the dataset, histograms for each variable, scatter plots for pairs of variables, and additional analysis such as individual and mean ratios, and a correlation matrix.
 Explore the generated files and outputs to gain insights into the dataset. You can further customize the analysis according to your requirements by modifying the analysis.py script.
 
+***
 
 #### Description of the files in the repository
 
-* <span style="color:purple">__.gitignore__</span>
+* <span style="color:purple">__.gitignore__</span> 
+
+> File format: Text. Description: Specifies files and directories to be ignored by Git during commits and updates.
+
 * <span style="color:purple">__analysis.py__</span>
+
+> File format: Python script (.py). Description: Python script for analyzing the Iris dataset. Generates various analytical results based on the data.
+
 * <span style="color:purple">__Corelation_matrix.png__</span>
+
+> File format: PNG image. Description: Correlation matrix demonstrating the relationship between variables in the Iris dataset. Generated using the analysis script.
+
 * <span style="color:purple">__Individual_ratios.txt__</span>
+
+> File format: Text. Description: File containing individual length-to-width ratios for each iris specimen. Generated using the analysis script.
+
 * <span style="color:purple">__iris-pic.png__</span>
+
+> File format: PNG image. Description: Image of an iris, used for visualization in README.
+
 * <span style="color:purple">__iris.csv__</span>
+
+> File format: CSV. Description: Iris dataset containing information about the length and width of sepals and petals of iris flowers.
+
 * <span style="color:purple">__Mean_ratios.txt__</span>
+
+> File format: Text. Description: File containing mean length-to-width ratios for each iris species. Generated using the analysis script.
+
 * <span style="color:purple">__petal length_cm_histogram.png, petal width_cm_histogram.png, sepal length_cm_histogram.png, sepal width_cm_histogram.png, species of flowers_histogram.png__</span>
+
+> File format: PNG image. Description: Histograms for each variable in the Iris dataset. Generated using the analysis script.
+
 * <span style="color:purple">__petal length_cm(Summary).txt, petal width_cm(Summary).txt, sepal length_cm(Summary).txt, sepal width_cm(Summary).txt, species of flowers(Summary).txt__</span>
+
+> File format: Text. Description: Files with a brief description of each variable in the Iris dataset. Generated using the analysis script.
+
 * <span style="color:purple">__ratio.py__</span>
+
+>  File format: Python script (.py). Description: Python module containing functions for calculating individual and mean length-to-width ratios.
+
 * <span style="color:purple">__README.md__</span>
+
+> File format: Markdown (.md). Description: README file with project description, installation and usage instructions, description of files and analytical conclusions based on the results obtained. 
+
 * <span style="color:purple">__scatter_plot.png__</span>
+
+> File format: PNG image. Description: Scatter plot showing relationships between pairs of variables in the Iris dataset. Generated using the analysis script.
+
 * <span style="color:purple">__Summary.txt__</span>
+
+> File format: Text. Description: File containing summary information about the Iris dataset. Generated using the analysis script.
+
+
+***
 
 
 #### Author
@@ -106,3 +150,8 @@ This project was created by **Yuliia Kharchenko**.
 * [Exploratory Data Analysis on Iris Dataset on www.geeksforgeeks.org](https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/)
 * [Exploratory Data Analysis on Iris Dataset](https://www.tutorialspoint.com/exploratory-data-analysis-on-iris-dataset)
 * [Iris Flower Data Set on www.devx.com](https://www.devx.com/terms/iris-flower-data-set/)
+
+
+***
+
+### END
