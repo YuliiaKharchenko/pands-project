@@ -2,18 +2,19 @@
 
 # Autor Yuliia Kharchenko 
 
-
+# import libraries and modules required 
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
 import seaborn as sns 
 import ratio
 
-
+# define the filename fof Iris dataset
 filename="iris.csv"
+# define the filename for the summary information
 file="Summary.txt"
 
-
+# function to read the Iris dataset using pandas
 def read_with_pandas():
    try:
       data=pd.read_csv(filename)
@@ -21,7 +22,7 @@ def read_with_pandas():
    except FileNotFoundError:
       print(f"File{filename} is not found")
      
-   
+# function to generate summary information about the Iris dataset   
 def summary_info():
    data= read_with_pandas()
    summaryinfo= [
@@ -54,14 +55,14 @@ def summary_info():
    ]
    return  summaryinfo
 
-
+# function to write summary information to a text file
 def summary_info_results(): 
    results=summary_info()
    with open(file, "wt", encoding="utf-8") as f:
         for result in results:
             print(result, file=f)
 
-
+# function to generate separate summary information files
 def separate_summary_info():
     data = read_with_pandas()
     # Obtain the names of all columns in the df data
@@ -73,7 +74,7 @@ def separate_summary_info():
       with open(separateFiles, "wt") as f:
          print(separateSummary, file=f)
 
-
+# function to generate histograms for each variable in the dataset
 def safe_histogram():
     data = read_with_pandas()
     # Iterate over each column
@@ -89,7 +90,7 @@ def safe_histogram():
         plt.savefig(f"{column}_histogram.png")
         plt.close()  # Close the current figure to free up memory
 
-
+# function to generate a scatter plot of pairs of variables
 def save_scatter_plot():
    data = read_with_pandas()
    sns.pairplot(data, hue="species of flowers", palette="Paired")
@@ -98,7 +99,7 @@ def save_scatter_plot():
    plt.savefig("scatter_plot.png")
    plt.close()
 
-
+# function to generate a correlation matrix for the dataset
 def correlation_matrix():
    data= read_with_pandas()
    columns = data.drop(columns=["species of flowers"])
@@ -109,7 +110,7 @@ def correlation_matrix():
    plt.savefig("Correlation_matrix.png")
    plt.close()
 
-
+# main function to execute the analysis
 def main():
    summary_info_results()
    separate_summary_info()
@@ -120,7 +121,7 @@ def main():
    print("The project is completed")
 
 
-
+# execute the main function if the script is run directly
 if __name__ == "__main__":
     main()
 
