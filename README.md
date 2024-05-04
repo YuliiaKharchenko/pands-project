@@ -69,6 +69,24 @@ Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/d
 The program will generate summary information about the dataset, histograms for each variable, scatter plots for pairs of variables, and additional analysis such as individual and mean ratios, and a correlation matrix.
 Explore the generated files and outputs to gain insights into the dataset. You can further customize the analysis according to your requirements by modifying the analysis.py script.
 
+
+#### Description of the files in the repository
+
+* <span style="color:purple">__.gitignore__</span>
+* <span style="color:purple">__analysis.py__</span>
+* <span style="color:purple">__Corelation_matrix.png__</span>
+* <span style="color:purple">__Individual_ratios.txt__</span>
+* <span style="color:purple">__iris-pic.png__</span>
+* <span style="color:purple">__iris.csv__</span>
+* <span style="color:purple">__Mean_ratios.txt__</span>
+* <span style="color:purple">__petal length_cm_histogram.png, petal width_cm_histogram.png, sepal length_cm_histogram.png, sepal width_cm_histogram.png, species of flowers_histogram.png__</span>
+* <span style="color:purple">__petal length_cm(Summary).txt, petal width_cm(Summary).txt, sepal length_cm(Summary).txt, sepal width_cm(Summary).txt, species of flowers(Summary).txt__</span>
+* <span style="color:purple">__ratio.py__</span>
+* <span style="color:purple">__README.md__</span>
+* <span style="color:purple">__scatter_plot.png__</span>
+* <span style="color:purple">__Summary.txt__</span>
+
+
 #### Author
 
 This project was created by **Yuliia Kharchenko**. 
@@ -83,6 +101,7 @@ This project was created by **Yuliia Kharchenko**.
 * [Seaborn: statistical data visualization](https://seaborn.pydata.org/#seaborn-statistical-data-visualization)
 * [CSV File Reading and Writing](https://docs.python.org/3/library/csv.html)
 * [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+* [How to apply color on text in Markdown](https://stackoverflow.com/questions/35465557/how-to-apply-color-on-text-in-markdown)
 * [Reading and Writing CSV Files in Python_Real_Python](https://realpython.com/python-csv/)
 * [Exploratory Data Analysis on Iris Dataset on www.geeksforgeeks.org](https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/)
 * [Exploratory Data Analysis on Iris Dataset](https://www.tutorialspoint.com/exploratory-data-analysis-on-iris-dataset)
