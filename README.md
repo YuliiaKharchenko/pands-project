@@ -194,7 +194,7 @@ Maximum is the largest observed values for each variable. For example, the maxim
 
 2. **Histogram Generation**. 
 
-Histograms are used to visualise the frequency and distribution of data to be investigated. The WikipediA's description of histogram definition is [here](https://en.wikipedia.org/wiki/Histogram).
+Histograms are used to visualise the frequency of data distribution to be investigated. The WikipediA's description of histogram definition is [here](https://en.wikipedia.org/wiki/Histogram).
 
 To generate histograms for each variable this function was created: 
 
@@ -234,6 +234,8 @@ This clearly shows that there are three variables that occur with the same frequ
 
 3. **Scatter Plot Creation**. 
 
+The WikipediA's description of Scatter Plot definition is [here](https://en.wikipedia.org/wiki/Scatter_plot).
+
 For scatter plot generation this function exists: 
 
 ```python
@@ -243,10 +245,12 @@ def save_scatter_plot():
 The output is: 
 
 <div style="display:flex; flex-direction:row;">
-    <img src="scatter_plot.png" alt="scatter plot" style="width:60%;">
+    <img src="scatter_plot.png" alt="scatter plot" style="width:70%;">
 </div>
 
-Each scatter plot represents the relationship between two variables in the dataset. Data points are highlighted in colour based on the species of flowers variable (hue=‘species of flowers’) to illustrate how different species are distributed across the scatter plots. 
+it generates 16 plots on a single figure. This happens because each variable is plotted on the axes as both X and Y in every combination with the other variables, including itself. Thus, it creates a matrix of 4x4 plots, where each plot represents a combination of two variables.
+
+**Quick observation**. 
 
 4. **Additional Analysis**. 
 
