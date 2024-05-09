@@ -204,16 +204,33 @@ def safe_histogram():
 The outputs are: 
 
 <div style="display:flex; flex-direction:row;">
-    <img src="petal length_cm_histogram.png" alt="Petal Length Histogram" style="width:50%;">
-    <img src="petal width_cm_histogram.png" alt="Petal Width Histogram" style="width:50%;">
+    <img src="petal length_cm_histogram.png" alt="Petal Length Histogram" style="width:40%;">
+    <img src="petal width_cm_histogram.png" alt="Petal Width Histogram" style="width:40%;">
 </div>
 
 <div style="display:flex; flex-direction:row;">
-    <img src="sepal length_cm_histogram.png" alt="Sepal Length Histogram" style="width:50%;">
-    <img src="sepal width_cm_histogram.png" alt="Sepal Width Histogram" style="width:50%;">
+    <img src="sepal length_cm_histogram.png" alt="Sepal Length Histogram" style="width:40%;">
+    <img src="sepal width_cm_histogram.png" alt="Sepal Width Histogram" style="width:40%;">
 </div>
 
 These histograms provide visual insights into the distribution of each variable and can be useful for exploratory data analysis.
+
+**Quick observation**. The x-axis represents the values of the variables, while the y-axis represents their frequency or distribution density. Each plot is divided into 10 cells (bins) containing the values of a variable with a certain frequency of occurrence. Upon closer examination of these images, it becomes apparent that the variables "petal length" and "petal width" exhibit skewed distributions. The highest frequency of "petal length" values is observed between 1-1.5 mm, while there is an absence of frequencies between 2-2.9 mm. The variable ranges from 1 to 6.9 mm.
+
+For the variable "petal width", the highest frequency of values is recorded between 0.1-0.3 mm. There is a very low frequency (only 1-2 specimens) between 0.5-0.6 mm. The range extends from 0.1 to 2.5 mm.
+
+As for "sepal length" and "sepal width", their distribution histograms exhibit a more uniform pattern, particularly the frequency of "sepal width", demonstrating a normal distribution of the variable in the plot. Let's look at the most frequent values:
+
+"sepal length": between 5.4 and 5.7 mm, with a range from 4.3 to 7.9 mm.
+"sepal width": between 2.9 and 3.2 mm, with a range from 2 to 4.4 mm.
+
+Also the output of species of flowers was generated: 
+
+<div style="display:flex; flex-direction:row;">
+    <img src="species of flowers_histogram.png" alt="species of flowers Histogram" style="width:40%;">
+</div>
+
+This clearly shows that there are three variables that occur with the same frequency and it is equal to 50.
 
 3. **Scatter Plot Creation**. 
 4. **Additional Analysis**. 
