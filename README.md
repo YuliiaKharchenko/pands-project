@@ -233,6 +233,21 @@ Also the output of species of flowers was generated:
 This clearly shows that there are three variables that occur with the same frequency and it is equal to 50.
 
 3. **Scatter Plot Creation**. 
+
+For scatter plot generation this function exists: 
+
+```python
+def save_scatter_plot():
+```   
+
+The output is: 
+
+<div style="display:flex; flex-direction:row;">
+    <img src="scatter_plot.png" alt="scatter plot" style="width:60%;">
+</div>
+
+Each scatter plot represents the relationship between two variables in the dataset. Data points are highlighted in colour based on the species of flowers variable (hue=‘species of flowers’) to illustrate how different species are distributed across the scatter plots. 
+
 4. **Additional Analysis**. 
 
 
