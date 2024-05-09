@@ -193,6 +193,28 @@ the mean values of sepal length, sepal width, petal length and petal width are a
 Maximum is the largest observed values for each variable. For example, the maximum sepal length is 7.9 cm, the maximum sepal width is 4.4 cm, and so on.
 
 2. **Histogram Generation**. 
+
+Histograms are used to visualise the frequency and distribution of data to be investigated. The WikipediA's description of histogram definition is [here](https://en.wikipedia.org/wiki/Histogram).
+
+To generate histograms for each variable this function was created: 
+
+```python
+def safe_histogram():
+```
+The outputs are: 
+
+<div style="display:flex; flex-direction:row;">
+    <img src="petal length_cm_histogram.png" alt="Petal Length Histogram" style="width:50%;">
+    <img src="petal width_cm_histogram.png" alt="Petal Width Histogram" style="width:50%;">
+</div>
+
+<div style="display:flex; flex-direction:row;">
+    <img src="sepal length_cm_histogram.png" alt="Sepal Length Histogram" style="width:50%;">
+    <img src="sepal width_cm_histogram.png" alt="Sepal Width Histogram" style="width:50%;">
+</div>
+
+These histograms provide visual insights into the distribution of each variable and can be useful for exploratory data analysis.
+
 3. **Scatter Plot Creation**. 
 4. **Additional Analysis**. 
 
