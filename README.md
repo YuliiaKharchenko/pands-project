@@ -250,10 +250,36 @@ The output is:
 
 it generates 16 plots on a single figure. This happens because each variable is plotted on the axes as both X and Y in every combination with the other variables, including itself. Thus, it creates a matrix of 4x4 plots, where each plot represents a combination of two variables.
 
-**Quick observation**. 
+**Quick observation**. LLooking at the matrix, certain patterns in the relationships between variables can be observed. For instance, it's evident that the variables "petal length" and "petal width" exhibit a strong correlation and demonstrate a linear relationship with each other. The points of their intersection visually depict a resemblance to a straight line, supporting the previous conclusion. Additionally, it's apparent that the Iris-setosa species is visually distinct from the other two species, indicating that this species is easily distinguishable based on its morphological features among all the studied species in the dataset. Nevertheless, the variables show varying degrees of relationships, as inferred from their respective graphical visualizations.
 
 4. **Additional Analysis**. 
 
+In the "Additional Analysis" section, two functions are proposed:  
+
+```python
+def correlation_matrix():
+```
+This function is designed to construct a correlation matrix for the variables in the Iris dataset. It generates a heatmap of correlation, displaying the degree of linear relationship between variables. The variable "species of flowers" is excluded from consideration as it is a categorical variable. The output is a heatmap with annotations, illustrating the correlation coefficients between variables.
+
+The output is: 
+
+<div style="display:flex; flex-direction:row;">
+    <img src="Correlation_matrix.png" alt="oppelation matrix" style="width:70%;">
+</div>
+
+```python
+def main():
+   summary_info_results()
+   separate_summary_info()
+   safe_histogram()
+   save_scatter_plot()
+   ratio.individual_and_mean_ratios()
+   correlation_matrix() 
+   print("The project is completed")
+```
+The individual_and_mean_ratios() function serves to compute individual and mean ratios for the length and width of petals and sepals for each species of iris. It analyzes the data from the Iris dataset, calculates ratios for each iris specimen, and computes the average ratios for each iris species. The function returns the results in text format and also writes them to files named "Individual_ratios.txt" and "Mean_ratios.txt".
+The individual_and_mean_ratios() function is organized in a separate module and is invoked by the main program to perform specific analysis tasksю
+The main() function serves as the entry point for executing the analysis tasks on the Iris dataset. By organizing these tasks within main(), the code becomes more modular and easier to manage.
 
 #### Author
 
