@@ -250,7 +250,7 @@ The output is:
 
 it generates 16 plots on a single figure. This happens because each variable is plotted on the axes as both X and Y in every combination with the other variables, including itself. Thus, it creates a matrix of 4x4 plots, where each plot represents a combination of two variables.
 
-**Quick observation**. LLooking at the matrix, certain patterns in the relationships between variables can be observed. For instance, it's evident that the variables "petal length" and "petal width" exhibit a strong correlation and demonstrate a linear relationship with each other. The points of their intersection visually depict a resemblance to a straight line, supporting the previous conclusion. Additionally, it's apparent that the Iris-setosa species is visually distinct from the other two species, indicating that this species is easily distinguishable based on its morphological features among all the studied species in the dataset. Nevertheless, the variables show varying degrees of relationships, as inferred from their respective graphical visualizations.
+**Quick observation**. Looking at the matrix, certain patterns in the relationships between variables can be observed. For instance, it's evident that the variables "petal length" and "petal width" exhibit a strong correlation and demonstrate a linear relationship with each other. The points of their intersection visually depict a resemblance to a straight line, supporting the previous conclusion. Additionally, it's apparent that the Iris-setosa species is visually distinct from the other two species, indicating that this species is easily distinguishable based on its morphological features among all the studied species in the dataset. Nevertheless, the variables show varying degrees of relationships, as inferred from their respective graphical visualizations.
 
 4. **Additional Analysis**. 
 
@@ -264,8 +264,31 @@ This function is designed to construct a correlation matrix for the variables in
 The output is: 
 
 <div style="display:flex; flex-direction:row;">
-    <img src="Correlation_matrix.png" alt="oppelation matrix" style="width:70%;">
+    <img src="Correlation_matrix.png" alt="oppelation matrix" style="width:80%;">
 </div>
+
+**Quick observation**. Correlation analysis helps to understand how variables are related. It uses a number called the [correlation coefficient](https://en.wikipedia.org/wiki/Correlation_coefficient), which can range from -1 to +1. This number tells us how strong the relationship is between the variables and whether it's positive or negative. 
+The Wikipedia's description of what correlation is [here](https://en.wikipedia.org/wiki/Correlation).
+
+The most popular ways to find correlation between variables are:
+
+* [Pearson correlation](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient): Checks how much two continuous variables change together in a straight line.
+* [Spearman correlation](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient): Checks if two variables change together, but it doesn't need a straight line.
+* [Kendall correlation](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient): Similar to Spearman's, but it also considers if the variables change together in pairs.
+
+The NumPy library was used in the above python function: [numpy.corrcoef()](https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html). This function computes the Pearson correlation coefficient between two or more arrays. It takes the arrays as input and returns a correlation matrix.
+
+Analyzing the data from the matrix:
+
+| Variable 1    | Variable 2    | Correlation Coefficient | Relationship Description              |
+|---------------|---------------|------------------------|----------------------------------------|
+| Petal Length  | Petal Width   | 0.96                   | Strong positive correlation            |
+| Petal Length  | Sepal Length  | 0.87                   | Strong positive correlation            |
+| Sepal Length  | Petal Width   | 0.82                   | Strong positive correlation            |
+| Sepal Length  | Sepal Width   | -0.11                  | No correlation                         |
+| Sepal Width   | Petal Width   | -0.36                  | Weak negative correlation              |
+| Sepal Width   | Petal Length  | -0.42                  | Weak negative correlation              |
+
 
 ```python
 def main():
