@@ -107,6 +107,12 @@ def correlation_matrix():
    plt.figure(figsize=(10, 8))
    sns.heatmap(corr_mat, annot=True, cmap="BuPu", fmt=".2f")
    plt.title("Iris dataset correlation matrix")
+   # Get column names
+   column_names = columns.columns
+   # Set x-axis ticks and labels to column names
+   plt.xticks(ticks=np.arange(len(column_names))+0.5, labels=column_names)
+   # Set y-axis ticks and labels to column names
+   plt.yticks(ticks=np.arange(len(column_names))+0.5, labels=column_names)
    plt.savefig("Correlation_matrix.png")
    plt.close()
 
