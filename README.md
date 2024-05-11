@@ -245,7 +245,7 @@ def save_scatter_plot():
 The output is: 
 
 <div style="display:flex; flex-direction:row;">
-    <img src="scatter_plot.png" alt="scatter plot" style="width:70%;">
+    <img src="scatter_plot.png" alt="scatter plot" style="width:80%;">
 </div>
 
 it generates 16 plots on a single figure. This happens because each variable is plotted on the axes as both X and Y in every combination with the other variables, including itself. Thus, it creates a matrix of 4x4 plots, where each plot represents a combination of two variables.
@@ -254,7 +254,7 @@ it generates 16 plots on a single figure. This happens because each variable is 
 
 4. **Additional Analysis**. 
 
-In the "Additional Analysis" section, two functions are proposed:  
+In the "Additional Analysis" section, one function and a module are proposed:  
 
 ```python
 def correlation_matrix():
@@ -301,8 +301,39 @@ def main():
    print("The project is completed")
 ```
 The individual_and_mean_ratios() function serves to compute individual and mean ratios for the length and width of petals and sepals for each species of iris. It analyzes the data from the Iris dataset, calculates ratios for each iris specimen, and computes the average ratios for each iris species. The function returns the results in text format and also writes them to files named "Individual_ratios.txt" and "Mean_ratios.txt".
-The individual_and_mean_ratios() function is organized in a separate module and is invoked by the main program to perform specific analysis tasksю
+The individual_and_mean_ratios() function is organized in a separate module and is invoked by the main program to perform specific analysis tasks.
 The main() function serves as the entry point for executing the analysis tasks on the Iris dataset. By organizing these tasks within main(), the code becomes more modular and easier to manage.
+
+The module **`ratio.py`** contains two functions, the first of which 
+```python
+def read_fileCSV(): 
+```   
+was created as an alternative and allows the use of the CSV module to read data. It can be used to translate data to the console by columns and perform various manipulations with them if needed.
+
+The second one is: 
+```python
+def individual_and_mean_ratios(): 
+``` 
+which is called by the analysis.py script. It performs calculations and visualises the results to separate files named "Individual_ratios.txt" and "Mean_ratios.txt".
+
+The output of mean ratios is: 
+``` 
+Mean Ratios:
+Species: Iris-setosa
+Mean Petal Length to Width Ratio: 7.08
+Mean Sepal Length to Width Ratio: 1.47
+
+Species: Iris-versicolor
+Mean Petal Length to Width Ratio: 3.24
+Mean Sepal Length to Width Ratio: 2.16
+
+Species: Iris-virginica
+Mean Petal Length to Width Ratio: 2.78
+Mean Sepal Length to Width Ratio: 2.23
+
+``` 
+
+
 
 #### Author
 

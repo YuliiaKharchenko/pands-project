@@ -103,7 +103,7 @@ def save_scatter_plot():
 def correlation_matrix():
    data= read_with_pandas()
    columns = data.drop(columns=["species of flowers"])
-   corr_mat = columns.corr()
+   corr_mat = np.corrcoef(columns, rowvar=False)
    plt.figure(figsize=(10, 8))
    sns.heatmap(corr_mat, annot=True, cmap="BuPu", fmt=".2f")
    plt.title("Iris dataset correlation matrix")
