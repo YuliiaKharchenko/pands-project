@@ -186,6 +186,20 @@ This function extracts and prints separate summary statistics for each variable 
 It creates separate text files for each variable containing its descriptive statistics.
 The summary statistics for each variable include the count, mean, standard deviation, minimum, 25th percentile, median, 75th percentile, and maximum value.
 
+General characteristics of variables are: 
+
+
+|              | sepal length_cm | sepal width_cm | petal length_cm | petal width_cm |
+|--------------|-----------------|----------------|-----------------|----------------|
+| count        | 150.000000      | 150.000000     | 150.000000      | 150.000000     |
+| mean         | 5.843333        | 3.054000       | 3.758667        | 1.198667       |
+| std          | 0.828066        | 0.433594       | 1.764420        | 0.763161       |
+| min          | 4.300000        | 2.000000       | 1.000000        | 0.100000       |
+| 25%          | 5.100000        | 2.800000       | 1.600000        | 0.300000       |
+| 50%          | 5.800000        | 3.000000       | 4.350000        | 1.300000       |
+| 75%          | 6.400000        | 3.300000       | 5.100000        | 1.800000       |
+| max          | 7.900000        | 4.400000       | 6.900000        | 2.500000       |
+
 
 **Quick observation**: There are 150 measurements for each variable, 
 the mean values of sepal length, sepal width, petal length and petal width are approximately 5.84 cm, 3.05 cm, 3.76 cm and 1.20 cm respectively, the standard deviation measures the variance or spread of values around the mean. The minimum is the smallest observed value for each variable. For example, the minimum sepal length is 4.3 cm, the minimum sepal width is 2.0 cm, and so on.
@@ -215,14 +229,14 @@ The outputs are:
 
 These histograms provide visual insights into the distribution of each variable and can be useful for exploratory data analysis.
 
-**Quick observation**. The x-axis represents the values of the variables, while the y-axis represents their frequency or distribution density. Each plot is divided into 10 cells (bins) containing the values of a variable with a certain frequency of occurrence. Upon closer examination of these images, it becomes apparent that the variables "petal length" and "petal width" exhibit skewed distributions. The highest frequency of "petal length" values is observed between 1-1.5 mm, while there is an absence of frequencies between 2-2.9 mm. The variable ranges from 1 to 6.9 mm.
+**Quick observation**. The x-axis represents the values of the variables, while the y-axis represents their frequency or distribution density. Each plot is divided into 10 cells (bins) containing the values of a variable with a certain frequency of occurrence. Upon closer examination of these images, it becomes apparent that the variables "petal length" and "petal width" exhibit skewed distributions. The highest frequency of "petal length" values is observed between 1-1.5 cm, while there is an absence of frequencies between 2-2.9 cm. The variable ranges from 1 to 6.9 cm.
 
-For the variable "petal width", the highest frequency of values is recorded between 0.1-0.3 mm. There is a very low frequency (only 1-2 specimens) between 0.5-0.6 mm. The range extends from 0.1 to 2.5 mm.
+For the variable "petal width", the highest frequency of values is recorded between 0.1-0.3 cm. There is a very low frequency (only 1-2 specimens) between 0.5-0.6 cm. The range extends from 0.1 to 2.5 cm.
 
 As for "sepal length" and "sepal width", their distribution histograms exhibit a more uniform pattern, particularly the frequency of "sepal width", demonstrating a normal distribution of the variable in the plot. Let's look at the most frequent values:
 
-"sepal length": between 5.4 and 5.7 mm, with a range from 4.3 to 7.9 mm.
-"sepal width": between 2.9 and 3.2 mm, with a range from 2 to 4.4 mm.
+"sepal length": between 5.4 and 5.7 cm, with a range from 4.3 to 7.9 cm.
+"sepal width": between 2.9 and 3.2 cm, with a range from 2 to 4.4 cm.
 
 Also the output of species of flowers was generated: 
 
@@ -310,7 +324,7 @@ def read_fileCSV():
 ```   
 was created as an alternative and allows the use of the CSV module to read data. It can be used to translate data to the console by columns and perform various manipulations with them if needed.
 
-The second one is: 
+ The second one is: 
 ```python
 def individual_and_mean_ratios(): 
 ``` 
@@ -330,9 +344,11 @@ Mean Sepal Length to Width Ratio: 2.16
 Species: Iris-virginica
 Mean Petal Length to Width Ratio: 2.78
 Mean Sepal Length to Width Ratio: 2.23
-
 ``` 
 
+**Quick observation**.  Individual ratios serve the purpose of providing a quantitative measure of the proportional relationships between specific variables, which can be further utilized for data visualization and analysis.
+The mean ratios offer insights into the size proportions of petals and sepals for each iris species. For Iris-setosa, the petals are notably longer compared to their width, with a mean petal length to width ratio of 7.08. In Iris-versicolor, there's a more balanced proportion between sepal length and width, indicated by a mean sepal length to width ratio of 2.16. Iris-virginica falls between the other two species, with mean ratios indicating intermediate proportions.
+These ratios provide a simple way to understand the physical characteristics of each iris species, helping in their identification and classification.
 
 
 #### Author
