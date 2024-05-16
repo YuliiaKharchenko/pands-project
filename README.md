@@ -83,6 +83,10 @@ Explore the generated files and outputs to gain insights into the dataset. You c
 
 > File format: Python script (.py). Description: Python script for analyzing the Iris dataset. Generates various analytical results based on the data.
 
+* <span style="color:purple">__Boxplots.png__</span>
+
+> File format: PNG image. Description: Box plots provide a visual summary of the distribution of data, еhey are useful for identifying outliers and comparing the distribution of variables across different categories or groups.
+
 * <span style="color:purple">__Corelation_matrix.png__</span>
 
 > File format: PNG image. Description: Correlation matrix demonstrating the relationship between variables in the Iris dataset. Generated using the analysis script.
@@ -110,6 +114,10 @@ Explore the generated files and outputs to gain insights into the dataset. You c
 * <span style="color:purple">__petal length_cm(Summary).txt, petal width_cm(Summary).txt, sepal length_cm(Summary).txt, sepal width_cm(Summary).txt, species of flowers(Summary).txt__</span>
 
 > File format: Text. Description: Files with a brief description of each variable in the Iris dataset. Generated using the analysis script.
+
+* <span style="color:purple">__radviz_plot.png__</span>
+
+> File format: PNG image. Description: The RadViz plot is for visualizing multidimensional data, where each point represents an observation, and each variable is represented by a point on a circle. 
 
 * <span style="color:purple">__ratio.py__</span>
 
@@ -270,7 +278,7 @@ it generates 16 plots on a single figure. This happens because each variable is 
 
 In the "Additional Analysis" section, three functions and a module are proposed:  
 
-First: 
+First function: 
 
 ```python
 def correlation_matrix():
@@ -306,21 +314,23 @@ Analyzing the data from the matrix:
 | Sepal Width   | Petal Length  | -0.42                  | Weak negative correlation              |
 
 
-Second:
+
+Second function:
 
 ```python
 def save_boxplots():
 ```
-
 The function was created to generate and save box plots for the Iris dataset. This visualization helps in understanding the range, median, and variability of each measurement within the dataset. By doing so, it provides insights into the statistical properties of the dataset and highlights any potential outliers or differences in the distributions of these variables.
 
 The output is: 
 
 <div style="display:flex; flex-direction:row;">
-    <img src="Boxplots.png" alt="Boxplots" style="width:60%;">
+    <img src="Boxplots.png" alt="Boxplots" style="width:80%;">
 </div>
 
-Third: 
+**Quick observation**. 
+
+Third function: 
 
 ```python
 def save_radviz_plot():
@@ -331,11 +341,12 @@ The function was created to generate and save a RadViz plot for the Iris dataset
 The output is: 
 
 <div style="display:flex; flex-direction:row;">
-    <img src="radviz_plot.png" alt="radviz" style="width:60%;">
+    <img src="radviz_plot.png" alt="radviz" style="width:80%;">
 </div>
 
 **Quick observation**. A RadViz (Radial Visualization) plot is a tool for visualizing multivariate data in a two-dimensional space. Each variable is assigned to a point on the circumference of a circle (called an anchor), and each data point is plotted within the circle based on the influence of each variable.
 The RadViz plot helps identify clusters of data points with similar characteristics. Looking at the resulting plot, it is clear that Iris-virginica and Iris-versicolor have very similar characteristics and are difficult to distinguish from each other, while Iris Setosa is separated from the other two species. Additionally, data points located closer to a specific anchor indicate that the corresponding variable has a stronger influence on these points. For instance, the variable "Sepal width" has the most influence on the species Iris-setosa.
+
 
 ```python
 def main():
