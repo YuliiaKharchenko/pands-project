@@ -268,7 +268,9 @@ it generates 16 plots on a single figure. This happens because each variable is 
 
 4. **Additional Analysis**. 
 
-In the "Additional Analysis" section, one function and a module are proposed:  
+In the "Additional Analysis" section, three functions and a module are proposed:  
+
+First: 
 
 ```python
 def correlation_matrix():
@@ -304,14 +306,47 @@ Analyzing the data from the matrix:
 | Sepal Width   | Petal Length  | -0.42                  | Weak negative correlation              |
 
 
+Second:
+
+```python
+def save_boxplots():
+```
+
+The function was created to generate and save box plots for the Iris dataset. This visualization helps in understanding the range, median, and variability of each measurement within the dataset. By doing so, it provides insights into the statistical properties of the dataset and highlights any potential outliers or differences in the distributions of these variables.
+
+The output is: 
+
+<div style="display:flex; flex-direction:row;">
+    <img src="Boxplots.png" alt="Boxplots" style="width:60%;">
+</div>
+
+Third: 
+
+```python
+def save_radviz_plot():
+```
+
+The function was created to generate and save a RadViz plot for the Iris dataset, which helps visualize the relationships and similarities between different species based on their features.
+
+The output is: 
+
+<div style="display:flex; flex-direction:row;">
+    <img src="radviz_plot.png" alt="radviz" style="width:60%;">
+</div>
+
+**Quick observation**. A RadViz (Radial Visualization) plot is a tool for visualizing multivariate data in a two-dimensional space. Each variable is assigned to a point on the circumference of a circle (called an anchor), and each data point is plotted within the circle based on the influence of each variable.
+The RadViz plot helps identify clusters of data points with similar characteristics. Looking at the resulting plot, it is clear that Iris-virginica and Iris-versicolor have very similar characteristics and are difficult to distinguish from each other, while Iris Setosa is separated from the other two species. Additionally, data points located closer to a specific anchor indicate that the corresponding variable has a stronger influence on these points. For instance, the variable "Sepal width" has the most influence on the species Iris-setosa.
+
 ```python
 def main():
    summary_info_results()
    separate_summary_info()
    safe_histogram()
    save_scatter_plot()
-   ratio.individual_and_mean_ratios()
    correlation_matrix() 
+   save_boxplots()
+   save_radviz_plot()
+   ratio.individual_and_mean_ratios()
    print("The project is completed")
 ```
 The individual_and_mean_ratios() function serves to compute individual and mean ratios for the length and width of petals and sepals for each species of iris. It analyzes the data from the Iris dataset, calculates ratios for each iris specimen, and computes the average ratios for each iris species. The function returns the results in text format and also writes them to files named "Individual_ratios.txt" and "Mean_ratios.txt".
@@ -364,6 +399,8 @@ This project was created by **Yuliia Kharchenko**.
 * [Matplotlib.pyplot](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html)
 * [Seaborn: statistical data visualization](https://seaborn.pydata.org/#seaborn-statistical-data-visualization)
 * [CSV File Reading and Writing](https://docs.python.org/3/library/csv.html)
+* [pandas.plotting.radviz](https://pandas.pydata.org/docs/reference/api/pandas.plotting.radviz.html)
+* [What is the RadViz plot in pandas?](https://www.educative.io/answers/what-is-the-radviz-plot-in-pandas)
 * [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 * [How to apply color on text in Markdown](https://stackoverflow.com/questions/35465557/how-to-apply-color-on-text-in-markdown)
 * [Reading and Writing CSV Files in Python_Real_Python](https://realpython.com/python-csv/)

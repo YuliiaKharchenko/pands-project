@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns 
 import ratio
 
+
 # define the filename fof Iris dataset
 filename="iris.csv"
 # define the filename for the summary information
@@ -116,19 +117,43 @@ def correlation_matrix():
    plt.savefig("Correlation_matrix.png")
    plt.close()
 
+
+# function to generate box plots for the dataset
+def save_boxplots():
+    data = read_with_pandas()
+    plt.figure(figsize=(12, 8))
+    sns.boxplot(data=data, palette="dark")
+    plt.title("Box Plot of Iris dataset variables")
+    plt.xlabel("Variables")
+    plt.ylabel("Values")
+    plt.savefig("Boxplots.png")
+    plt.close()
+
+# function to generate a RadViz plot for the dataset
+def save_radviz_plot():
+    data = read_with_pandas()
+    plt.figure(figsize=(12, 8))
+    pd.plotting.radviz(data, "species of flowers", color=["red", "black", "purple"])
+    plt.title("RadViz Plot of Iris dataset")
+    plt.savefig("radviz_plot.png")
+    plt.close()
+
 # main function to execute the analysis
 def main():
    summary_info_results()
    separate_summary_info()
    safe_histogram()
    save_scatter_plot()
-   ratio.individual_and_mean_ratios()
    correlation_matrix() 
+   save_boxplots()
+   save_radviz_plot()
+   ratio.individual_and_mean_ratios()
    print("The project is completed")
 
 
 # execute the main function if the script is run directly
 if __name__ == "__main__":
-    main()
+   main()
+
 
   
