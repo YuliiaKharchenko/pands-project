@@ -14,7 +14,7 @@ This repository contains an analysis of the Iris flower dataset used by the famo
 1. **Data Summary**: The program outputs a comprehensive summary of each variable in the dataset to a single text file. This summary includes general characteristics of variables, checking for missing values, and counting the number of flowers of each species, statistics for each dataset variable is additionally generated in separate text files.
 2. **Histogram Generation**: Histograms of each variable are saved as PNG files. Histograms provide insights into the distribution of values for each feature and help identify patterns and outliers.
 3. **Scatter Plot Creation**: The program generates scatter plots of each pair of variables. Scatter plots visualize the relationship between two variables and can reveal correlations or patterns in the data.
-4. **Additional Analysis**: The program conducts any other pertinent analysis necessary for gaining deeper insights into the dataset. This includes calculating individual and mean ratios of length-to-width variables, generating a correlation matrix, and saving it to a separate file.
+4. **Additional Analysis**: The program conducts any other pertinent analysis necessary for gaining deeper insights into the dataset. This includes calculating individual and mean ratios of length-to-width variables, generating a correlation matrix, boxplots, a RadViz plot, and saving it to a separate files.
 
 
 [WikipediA's](https://en.wikipedia.org/wiki/Iris_flower_data_set) description of the dataset.
@@ -30,7 +30,7 @@ Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/d
 - sepal width in cm
 - petal length in cm
 - petal width in cm
-- species of Flowers(setosa,versicolor, virginica)
+- species of flowers(setosa,versicolor, virginica)
 
 #### Overview of the Iris dataset: 
 
@@ -62,13 +62,13 @@ Downloaded from this resource-[Fisher's Iris data](https://archive.ics.uci.edu/d
 
 3. Install the required dependencies. You can install them using pip:
 
-> pip install pandas numpy matplotlib.pyplot seaborn
+> pip install pandas numpy matplotlib seaborn
 
 4. Once the dependencies are installed, you can run the program by executing the analysis.py script:
 
 > python analysis.py
 
-The program will generate summary information about the dataset, histograms for each variable, scatter plots for pairs of variables, and additional analysis such as individual and mean ratios, and a correlation matrix.
+The program will generate summary information about the dataset, histograms for each variable, scatter plots for pairs of variables, and additional analysis such as individual and mean ratios, a correlation matrix, boxplots, a radviz plot. 
 Explore the generated files and outputs to gain insights into the dataset. You can further customize the analysis according to your requirements by modifying the analysis.py script.
 
 ***
@@ -85,7 +85,7 @@ Explore the generated files and outputs to gain insights into the dataset. You c
 
 * <span style="color:purple">__Boxplots.png__</span>
 
-> File format: PNG image. Description: Box plots provide a visual summary of the distribution of data, еhey are useful for identifying outliers and comparing the distribution of variables across different categories or groups.
+> File format: PNG image. Description: Box plots provide a visual summary of the distribution of data, they are useful for identifying outliers and comparing the distribution of variables across different categories or groups.
 
 * <span style="color:purple">__Corelation_matrix.png__</span>
 
@@ -276,7 +276,8 @@ it generates 16 plots on a single figure. This happens because each variable is 
 
 4. **Additional Analysis**. 
 
-In the "Additional Analysis" section, three functions and a module are proposed:  
+In the "Additional Analysis" section, three functions and a module are proposed: 
+
 
 First function: 
 
@@ -322,13 +323,17 @@ def save_boxplots():
 ```
 The function was created to generate and save box plots for the Iris dataset. This visualization helps in understanding the range, median, and variability of each measurement within the dataset. By doing so, it provides insights into the statistical properties of the dataset and highlights any potential outliers or differences in the distributions of these variables.
 
+The WikipediA's description of boxplot definition is [here](https://en.wikipedia.org/wiki/Box_plot).
+
 The output is: 
 
 <div style="display:flex; flex-direction:row;">
     <img src="Boxplots.png" alt="Boxplots" style="width:80%;">
 </div>
 
-**Quick observation**. 
+**Quick observation**. The obtained figure shows the general distribution of four variables from the set of given Iris flowers. This type of graph is convenient because it allows for easy comparison of these distributions. For example, petal length has the widest range (and thus the highest variability), while sepal width has the narrowest range (indicating it is a more stable trait). Additionally, the variable sepal length demonstrates a normal distribution, while sepal width shows a roughly normal distribution. In contrast, petal length and petal width exhibit skewed distributions. Finally, there are potential outliers in the distribution of the sepal width variable.
+
+
 
 Third function: 
 
@@ -364,13 +369,17 @@ The individual_and_mean_ratios() function serves to compute individual and mean 
 The individual_and_mean_ratios() function is organized in a separate module and is invoked by the main program to perform specific analysis tasks.
 The main() function serves as the entry point for executing the analysis tasks on the Iris dataset. By organizing these tasks within main(), the code becomes more modular and easier to manage.
 
+
+
 The module **`ratio.py`** contains two functions, the first of which 
+
 ```python
 def read_fileCSV(): 
 ```   
 was created as an alternative and allows the use of the CSV module to read data. It can be used to translate data to the console by columns and perform various manipulations with them if needed.
 
- The second one is: 
+The second one is: 
+
 ```python
 def individual_and_mean_ratios(): 
 ``` 
@@ -397,6 +406,10 @@ The mean ratios offer insights into the size proportions of petals and sepals fo
 These ratios provide a simple way to understand the physical characteristics of each iris species, helping in their identification and classification.
 
 
+**Conclusions**. It should be noted that most of the function names are presented in the description; the full script is in the files analysis.ru and ratio.ru, which can be modified upon individual or additional request. The analysis of the Iris dataset allowed us to identify important dependencies and features of each iris species. The use of different visualizations such as histograms, scatter plots, box plots, and RadViz enabled a deeper understanding of the data structure and the relationships between variables. The calculated length-to-width ratios provided additional quantitative features that may be useful for the classification and identification of iris species. Of course, many more methods and tools can be applied to study them, as this well-known dataset is very convenient for this purpose.
+
+***
+
 #### Author
 
 This project was created by **Yuliia Kharchenko**. 
@@ -419,6 +432,7 @@ This project was created by **Yuliia Kharchenko**.
 * [Exploratory Data Analysis on Iris Dataset](https://www.tutorialspoint.com/exploratory-data-analysis-on-iris-dataset)
 * [Iris Flower Data Set on www.devx.com](https://www.devx.com/terms/iris-flower-data-set/)
 * [WikipediA's Ratio](https://en.wikipedia.org/wiki/Ratio)
+* [Box Plot Explained: Interpretation, Examples, & Comparison](https://www.simplypsychology.org/boxplots.html)
 
 
 ***

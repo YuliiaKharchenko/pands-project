@@ -118,7 +118,7 @@ def correlation_matrix():
    plt.close()
 
 
-# function to generate box plots for the dataset
+# function to generate boxplots for the dataset
 def save_boxplots():
     data = read_with_pandas()
     plt.figure(figsize=(12, 8))
